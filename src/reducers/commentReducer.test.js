@@ -20,4 +20,14 @@ describe('comment reducer tests', () => {
       1: ['hi', 'Is this a comment?']
     });
   });
+  it('handles the DELETE_COMMENT action', () => {
+    const initialState = {
+      1: ['hi', 'Is this a comment?']
+    };
+    const newState = reducer(initialState, deleteComment(1, 0));
+    
+    expect(newState).toEqual({
+      1: ['Is this a comment?']
+    });
+  });
 });
