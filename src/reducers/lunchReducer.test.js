@@ -45,4 +45,15 @@ describe('lunch reducer', () => {
       sandwich: null
     });
   });
+  it('handles the ADD_DESSERT action', () => {
+    const initialState = {
+      dessert: null
+    };
+
+    const updatedState = reducer(initialState, addDessert('strawberry shortcake'));
+
+    expect(updatedState).toEqual({
+      dessert: 'strawberry shortcake'
+    });
+  });
 });
