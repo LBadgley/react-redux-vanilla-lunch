@@ -2,18 +2,18 @@ import { CREATE_POST, DELETE_POST, createPost, deletePost, updatePost, UPDATE_PO
 
 describe('post testing', () => {
   it('can create a post', () => {
-    const fakeTitle = 'My First Blog';
+    const fakeId = 'My First Blog';
     const fakeBody = 'blogstuff';
-    expect(createPost(fakeTitle, fakeBody)).toEqual({
+    expect(createPost(fakeId, fakeBody)).toEqual({
       type: CREATE_POST,
-      payload: { title: fakeTitle, body: fakeBody }
+      payload: { title: fakeId, body: fakeBody }
     });
   });
   it('delete a post', () => {
-    const fakeTitle = 'title';
-    expect(deletePost(fakeTitle)).toEqual({
+    const fakeId = 'title';
+    expect(deletePost(fakeId)).toEqual({
       type: DELETE_POST,
-      payload: { title: fakeTitle }
+      payload: fakeId 
     });
   });
   it('updates a post via id', () => {
