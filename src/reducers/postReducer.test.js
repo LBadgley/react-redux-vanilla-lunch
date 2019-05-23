@@ -21,4 +21,18 @@ describe('post reducer tests', () => {
       { title: 'My new new new post', body: 'Is a another another thing?' }
     ]);
   });
+  it('handles the UPDATE_POST action', () => {
+    const initialState = [
+      { title: 'My new post', body: 'Is a thing?' },
+      { title: 'My new new post', body: 'Is a another thing?' },
+      { title: 'My new new new post', body: 'Is a another another thing?' }
+    ];
+    const newState = reducer(initialState, updatePost(1, 'TIS UPDATED'));
+
+    expect(newState).toEqual([
+      { title: 'My new post', body: 'Is a thing?' },
+      { title: 'My new new post', body: 'TIS UPDATED' },
+      { title: 'My new new new post', body: 'Is a another another thing?' }
+    ]);
+  });
 });

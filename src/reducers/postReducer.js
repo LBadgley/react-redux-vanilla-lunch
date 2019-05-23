@@ -17,7 +17,8 @@ export default function reducer(state = initialState, action) {
         {
           ...state[action.payload.id],
           body: action.payload.body
-        }
+        },
+        ...state.slice(action.payload.id + 1)
       ];
     default:
       return state;
