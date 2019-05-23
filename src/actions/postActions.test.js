@@ -9,4 +9,11 @@ describe('post testing', () => {
       payload: { title: fakeTitle, body: fakeBody }
     });
   });
+  it('delete a post', () => {
+    const fakeTitle = 'title';
+    expect(deletePost(fakeTitle)).toEqual({
+      type: DELETE_POST,
+      payload: { title: fakeTitle }
+    });
+  });
 });
