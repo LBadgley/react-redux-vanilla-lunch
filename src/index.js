@@ -1,8 +1,6 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { createStore } from 'redux';
+// import reducer from './reducers';
+// import { createStore } from 'redux';
 
-render (
-  <createStore />,
-  document.getElementById('root')
-);
+// const store = createStore(reducer);
+
+// store.dispatch({})
