@@ -35,4 +35,14 @@ describe('lunch reducer', () => {
       sandwich: 'tea sandwich'
     });
   });
+  it('handles the REMOVE_SANDWICH action', () => {
+    const initialState = {
+      sandwich: 'tea sandwich'
+    };
+    const updatedState = reducer(initialState, removeSandwich());
+
+    expect (updatedState).toEqual({
+      sandwich: null
+    });
+  });
 });
