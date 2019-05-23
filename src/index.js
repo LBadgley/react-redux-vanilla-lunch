@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import { addDrink, addSandwich, addDessert, removeDrink, removeSandwich, removeDessert } from './actions/lunchActions';
+import reducer from './reducers/lunchReducer';
 
 const initialState = {
   drink: null,
@@ -7,24 +7,6 @@ const initialState = {
   dessert: null,
 };
 
-function reducer(state = initialState, action) {
-  switch(action.type) {
-    case 'ADD_DRINK':
-      return { ...state, drink: action.payload };
-    case 'ADD_SANDWICH':
-      return { ...state, sandwich: action.payload };
-    case 'ADD_DESSERT':
-      return { ...state, dessert: action.payload };
-    case 'REMOVE_DRINK':
-      return { ...state, drink: null };
-    case 'REMOVE_SANDWICH':
-      return { ...state, sandwich: null };
-    case 'REMOVE_DESSERT':
-      return { ...state, dessert: null };
-    default: 
-      return state;
-  }
-}
 const store = createStore(reducer);
 
 store.dispatch(addDrink('water'));

@@ -1,5 +1,6 @@
 export const ADD_DRINK = 'ADD_DRINK';
 export const REMOVE_DRINK = 'REMOVE_DRINK';
+export const REMOVE_DESSERT = 'REMOVE_DESSERT';
 
 export const addDrink = drink => ({
   type: 'ADD_DRINK',
