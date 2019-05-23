@@ -7,5 +7,10 @@ describe('comment actions test', () => {
       payload: { postId: 0, comment: 'My comment' }
     });
   });
-  
+  it('handles the DELETE_COMMENT action', () => {
+    expect(deleteComment(0, 1)).toEqual({
+      type: DELETE_COMMENT,
+      payload: { postId: 0, commentId: 1 }
+    });
+  });
 });
