@@ -1,5 +1,8 @@
 export const ADD_DRINK = 'ADD_DRINK';
 export const REMOVE_DRINK = 'REMOVE_DRINK';
+export const ADD_SANDWICH = 'ADD_SANDWICH';
+export const REMOVE_SANDWICH = 'REMOVE_SANDWICH';
+export const ADD_DESSER = 'ADD_DESSERT';
 export const REMOVE_DESSERT = 'REMOVE_DESSERT';
 
 export const addDrink = drink => ({

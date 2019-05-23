@@ -23,6 +23,16 @@ describe('lunch reducer', () => {
     expect (updatedState).toEqual({
       drink: null
     });
+  });
 
+  it('handles the ADD_SANDWICH action', () => {
+    const initialState = {
+      sandwich: null
+    };
+    const updatedState = reducer(initialState, addSandwich('tea sandwich'));
+
+    expect (updatedState).toEqual({
+      sandwich: 'tea sandwich'
+    });
   });
 });
