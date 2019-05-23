@@ -1,34 +1,28 @@
-import { createStore } from 'redux';
-import reducer from './reducers/lunchReducer';
+// import { createStore } from 'redux';
+// import reducer from './reducers/lunchReducer';
 
-const initialState = {
-  drink: null,
-  sandwich: null,
-  dessert: null,
-};
+// const store = createStore(reducer);
 
-const store = createStore(reducer);
+// store.dispatch(addDrink('water'));
 
-store.dispatch(addDrink('water'));
+// console.log('added drank', store.getState());
 
-console.log('added drank', store.getState());
+// store.dispatch(addSandwich('BLT'));
 
-store.dispatch(addSandwich('BLT'));
+// console.log('added sandwich', store.getState());
 
-console.log('added sandwich', store.getState());
+// store.dispatch(addDessert('apple pie'));
 
-store.dispatch(addDessert('apple pie'));
+// console.log('added dessert', store.getState());
 
-console.log('added dessert', store.getState());
+// store.dispatch(removeDrink(null));
 
-store.dispatch(removeDrink(null));
+// console.log('remove drink', store.getState());
 
-console.log('remove drink', store.getState());
+// store.dispatch(removeSandwich(null));
 
-store.dispatch(removeSandwich(null));
+// console.log('remove sandwich', store.getState());
 
-console.log('remove sandwich', store.getState());
+// store.dispatch(removeDessert(null));
 
-store.dispatch(removeDessert(null));
-
-console.log('remove dessert', store.getState());
+// console.log('remove dessert', store.getState());
