@@ -1,5 +1,12 @@
 import React from 'react';
+import AllPosts from '../containers/post/AllPosts';
+import CreatePost from '../containers/post/CreatePost';
 
 export default function App() {
-  return <h1>hello this is the h1 you made</h1>;
+  return (
+    <>
+      <CreatePost />
+      <AllPosts />
+    </>
+  );
 }
