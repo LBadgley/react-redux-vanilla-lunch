@@ -1,9 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { deletePost } from '../../actions/postActions';
+
 
 function Post({ post }) {
   return (
-    <p>{post.title}</p>
+    <div style={{ margin: '20px' }}>
+      <Link to={`/posts/${post.id}`}>
+        <li>
+          <h2>{post.title}</h2>
+          <p onClick={deletePost.bind(null, post.id)} />
+        </li>
+      </Link>
+    </div>
   );
 }
 /* why is it nested like this? */

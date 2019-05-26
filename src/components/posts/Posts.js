@@ -8,7 +8,6 @@ function Posts({ posts }) {
       <Post post={post} />
     </li>
   ));
-  console.log(posts);
   return (
     <ul>
       {allPosts}
