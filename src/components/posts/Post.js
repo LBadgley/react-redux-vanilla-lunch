@@ -10,7 +10,7 @@ function Post({ post }) {
       <Link to={`/posts/${post.id}`}>
         <li>
           <h2>{post.title}</h2>
-          <p onClick={deletePost.bind(null, post.id)} />
+          <p onClick={deletePost.bind(null, post.id)}> Delete the post</p>
         </li>
       </Link>
     </div>
@@ -20,6 +20,7 @@ function Post({ post }) {
 /*---- is it because title is a property of post?*/
 Post.propTypes = {
   post: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired
   }).isRequired
 };
