@@ -22,6 +22,6 @@ describe('post selector test', () => {
       ]
     };
 
-    expect(getPost(state, 0)).toEqual({ id: 0, title: 'post1', body: 'body1' });
+    expect(getPost(state, 0)).toEqual({ id: 1, title: 'post1', body: 'body1' });
   });
 });
