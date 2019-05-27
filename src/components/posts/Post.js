@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { deletePost } from '../../actions/postActions';
-import { FaTrashAlt } from 'react-icons/fa';
+// import { FaTrashAlt } from 'react-icons/fa';
 
 
-function Post({ post }) {
+function Post({ post, deletePost }) {
   return (
     <div style={{ margin: '20px' }}>
       <Link to={`/posts/${post.id}`}>
         <div>
           <h2>{post.title}</h2>
         </div>
-          <FaTrashAlt onClick={deletePost.bind(null, post.id)} />
+          <button onClick={deletePost.bind(null, post.id)}>Delete This Post</button>
       </Link>
     </div>
   );
 }
 Post.propTypes = {
+  deletePost: PropTypes.func.isRequired,
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired
