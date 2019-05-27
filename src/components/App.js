@@ -16,8 +16,8 @@ export default function App() {
       <Router>
         <Link to="/">Home</Link>
         <Switch>
-          <Route path="/posts/:id" component={PostById} />
           <Route path="/" component={Home} />
+          {/* <Route path="/posts/:id" component={PostById} /> */}
         </Switch>
       </Router>
     </>
