@@ -9,16 +9,14 @@ function Post({ post }) {
   return (
     <div style={{ margin: '20px' }}>
       <Link to={`/posts/${post.id}`}>
-        <li>
+        <div>
           <h2>{post.title}</h2>
+        </div>
           <FaTrashAlt onClick={deletePost.bind(null, post.id)} />
-        </li>
       </Link>
     </div>
   );
 }
-/* why is it nested like this? */
-/*---- is it because title is a property of post?*/
 Post.propTypes = {
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
