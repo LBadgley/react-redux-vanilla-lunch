@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import Posts from '../../components/posts/Posts';
 import { getPosts } from '../../selectors/postSelectors';
+import Posts from '../../components/posts/Posts';
 import { deletePost } from '../../actions/postActions';
 
 /* connect posts to Redux and pass it the posts and set it to the posts of a given state */
