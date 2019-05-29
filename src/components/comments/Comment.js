@@ -6,7 +6,7 @@ function Comment({ id, comment, deleteComment }) {
     <section>
       <p>{comment}</p>
       <button onClick={deleteComment.bind(null, id)}>Delete</button>
-      </section>
+    </section>
   );
 }
 

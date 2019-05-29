@@ -2,8 +2,8 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Link,
-  Route
+  Route,
+  Link
 } from 'react-router-dom';
 import PostById from '../containers/post/PostById';
 import Home from './Home';

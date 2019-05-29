@@ -15,6 +15,7 @@ export default class CommentForm extends PureComponent {
 
     const { comment } = this.state;
     this.props.onSubmit(comment);
+    // this.setState({ comment: '' });
   }
 
   updateComment = ({ target }) => {

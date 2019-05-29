@@ -3,7 +3,7 @@ import { createComment } from '../../actions/commentActions';
 import CommentForm from '../../components/comments/CommentForm';
 
 const mapDispatchToProps = (dispatch, props) => ({
-  onsubmit(comment){
+  onSubmit(comment){
     dispatch(createComment(props.postId, comment));
   }
 });
