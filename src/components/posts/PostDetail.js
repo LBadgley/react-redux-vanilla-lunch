@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 
 function PostDetail({ post }) {
-  console.log(post);
   const paras = post.body.split('\n').map((p, i) => (
     <p key={i}>{p}</p>
   ));

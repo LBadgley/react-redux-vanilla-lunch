@@ -11,8 +11,8 @@ function Post({ post, deletePost }) {
         <div>
           <h2>{post.title}</h2>
         </div>
-          <button onClick={deletePost.bind(null, post.id)}>Delete This Post</button>
       </Link>
+          <button onClick={deletePost.bind(null, post.id)}>Delete This Post</button>
     </div>
   );
 }
